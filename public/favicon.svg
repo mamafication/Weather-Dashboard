@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="sun-grad" x1="16" y1="12" x2="36" y2="32" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFDD00"/>
+      <stop offset="100%" stop-color="#FF6B00"/>
+    </linearGradient>
+    <linearGradient id="cloud-back" x1="20" y1="22" x2="48" y2="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#E0F2FE"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+    <linearGradient id="cloud-front" x1="14" y1="26" x2="52" y2="54" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="45%" stop-color="#BAE6FD"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Glowing Sun Body -->
+  <circle cx="27" cy="23" r="13" fill="url(#sun-grad)" filter="url(#glow)"/>
+
+  <!-- Cloud Drop Shadow + Shape -->
+  <g filter="url(#shadow)">
+    <!-- Back Cloud Accent -->
+    <path d="M22 46 C16 46 12 41 12 35 C12 29.5 16.5 25.2 22 25 C23.5 19 28.8 15 35 15 C42.5 15 48.7 20.8 49 28.2 C53 29 56 32.5 56 36.8 C56 41.8 52 46 47 46 Z" fill="url(#cloud-back)" opacity="0.6"/>
+    
+    <!-- Main Stylized Cloud Front -->
+    <path d="M20 48 H46 C51 48 54 44.5 54 40 C54 35.8 51 32.5 47 32 C46.8 24.5 40.8 19 33.5 19 C27.5 19 22.5 22.8 20.8 28.2 C15.8 28.8 12 33 12 38 C12 43.5 15.5 48 20 48 Z" fill="url(#cloud-front)"/>
+  </g>
+
+  <!-- Stylized Rain Drops -->
+  <path d="M24 53 L22 57" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M33 53 L31 57" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M42 53 L40 57" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

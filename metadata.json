@@ -1,0 +1,6 @@
+{
+  "name": "Weather Dashboard",
+  "description": "Real-time weather updates, hourly forecasts, and interactive radar maps.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
